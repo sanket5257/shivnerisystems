@@ -199,19 +199,7 @@ const WorkSection = () => {
 
   return (
     <div className="relative min-h-screen bg-black text-white py-40 px-6 overflow-hidden">
-      {/* Background Video */}
-      <div className="absolute inset-0 w-full h-full">
-        <video 
-          className="absolute inset-0 w-full h-full object-cover" 
-          src="/assets/video_1.webm" 
-          autoPlay 
-          loop 
-          muted
-          playsInline
-        />
-        {/* Dark Overlay for better content visibility */}
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+     
 
       {/* Content */}
       <div className="relative z-10 max-w-[1400px] mx-auto" ref={sectionRef}>

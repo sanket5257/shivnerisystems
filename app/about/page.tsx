@@ -151,10 +151,10 @@ export default function UpticLanding() {
           <h1 className="text-6xl md:text-8xl font-semibold ">
             Bold Tech.
             <br />
-            <span className="text-gray-500">Built by People.</span>
+            <span className="text-neutral-500">Built by People.</span>
           </h1>
           
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
             We're a lean, global crew of engineers, architects, and coders building
             bold new apps and transforming legacy systems—with speed, security,
             and a little swagger.
@@ -178,12 +178,12 @@ export default function UpticLanding() {
             <h2 className="text-5xl md:text-7xl font-bold mb-4">
               Not Your
               <br />
-              Average <span className="text-gray-500">Dev</span>
+              Average <span className="text-neutral-500">Dev</span>
               <br />
-              <span className="text-gray-500">& Cloud Shop</span>
+              <span className="text-neutral-500">& Cloud Shop</span>
             </h2>
             
-            <p className="text-gray-400 max-w-xl text-lg mt-8">
+            <p className="text-neutral-400 max-w-xl text-lg mt-8">
               We're the team companies call when they need modern software
               that actually ships. From cloud-native builds to pipelines and
               automation, we architect your future while fixing what's holding
@@ -259,7 +259,7 @@ export default function UpticLanding() {
                       : 'top-[75%]'
                   }`}
                 >
-                  <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 max-w-md hover:border-gray-700 transition-all hover:scale-105">
+                  <div className="bg-neutral-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 max-w-md hover:border-gray-700 transition-all hover:scale-105">
                     <p className="text-white font-medium mb-3 text-lg">{service.question}</p>
                     <p className="text-gray-400">{service.answer}</p>
                   </div>
@@ -270,7 +270,7 @@ export default function UpticLanding() {
                       ? '-left-12 md:-left-16' 
                       : '-right-12 md:-right-16'
                   }`}>
-                    <div className="w-12 h-12 rounded-full bg-gray-800 border-2 border-gray-700 flex items-center justify-center hover:border-gray-500 transition-colors">
+                    <div className="w-12 h-12 rounded-full bg-neutral-800 border-2 border-gray-700 flex items-center justify-center hover:border-gray-500 transition-colors">
                       <svg className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                       </svg>
