@@ -117,9 +117,10 @@ const ServicesSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-black relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 relative overflow-hidden">
       <div className=" mx-auto px-8 lg:px-16">
-       <div className="mb-10">
+        <img className='absolute -z-10 top-0 -right-80 size-200 contrast-125' src="/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg" alt="" />
+       <div className="mb-10 z-50">
           <div className="inline-block px-6 py-2 border border-gray-700 rounded-full text-sm text-gray-400 mb-8">
             Services
           </div>
