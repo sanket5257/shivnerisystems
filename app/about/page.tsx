@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Mvp from '../components/sections/Mvp';
 
 export default function UpticLanding() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -147,7 +148,7 @@ export default function UpticLanding() {
             About Shivneri Systems
           </button>
           
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight">
+          <h1 className="text-6xl md:text-8xl font-semibold ">
             Bold Tech.
             <br />
             <span className="text-gray-500">Built by People.</span>
@@ -281,7 +282,7 @@ export default function UpticLanding() {
           </div>
         </div>
       </section>
-
+              <Mvp/>
       {/* Additional spacing */}
       <div className="h-screen"></div>
     </div>
