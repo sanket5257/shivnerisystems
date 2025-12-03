@@ -20,13 +20,16 @@ export default function UpticLanding() {
         gsap.registerPlugin(ScrollTrigger);
 
         // Hero section animations (exclude button)
-        gsap.from(heroRef.current?.querySelectorAll('.hero-content > :not(button)'), {
-          opacity: 0,
-          y: 30,
-          duration: 1,
-          stagger: 0.2,
-          ease: 'power3.out',
-        });
+        const heroElements = heroRef.current?.querySelectorAll('.hero-content > :not(button)');
+        if (heroElements && heroElements.length > 0) {
+          gsap.from(heroElements, {
+            opacity: 0,
+            y: 30,
+            duration: 1,
+            stagger: 0.2,
+            ease: 'power3.out',
+          });
+        }
 
         // Cylinder rotation animation
         gsap.to(cylinderRef.current, {
