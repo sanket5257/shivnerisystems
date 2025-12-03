@@ -18,7 +18,7 @@ const Header = () => {
 
   const navItems = [
     { id: 'services', label: 'Services +', path: '/services' },
-    { id: 'assessments', label: 'Assessments +', path: '/assessments' },
+    { id: 'work', label: 'Work +', path: '/work' },
     { id: 'how-we-work', label: 'How We Work', path: '/how-we-work' },
     { id: 'customer-stories', label: 'Customer Stories', path: '/customer-stories' },
     { id: 'partners', label: 'Partners', path: '/partners' },
