@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import Mvp from '../components/sections/Mvp';
+import Manifesto from '../components/sections/Manifesto';
 
 export default function UpticLanding() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -283,6 +284,7 @@ export default function UpticLanding() {
         </div>
       </section>
               <Mvp/>
+              <Manifesto/>
       {/* Additional spacing */}
       <div className="h-screen"></div>
     </div>

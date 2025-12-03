@@ -225,7 +225,7 @@ const WorkSection = () => {
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 ${
                 activeFilter === filter.id
                   ? 'bg-white text-black'
-                  : 'bg-zinc-900/80 backdrop-blur-sm text-gray-400 hover:bg-zinc-800/80 hover:text-white border border-zinc-800'
+                  : 'bg-zinc-900/80 backdrop-blur-sm text-neutral-400 hover:bg-zinc-800/80 hover:text-white border border-zinc-800'
               }`}
             >
               {filter.label}
