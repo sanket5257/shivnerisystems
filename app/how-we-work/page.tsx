@@ -50,8 +50,8 @@ const Page = () => {
         </div>
 
         {/* Bottom Section */}
-        <div className="container mx-auto px-6 pb-4 text-center">
-          <div className="grid md:grid-cols-2 gap-8 items-start max-w-6xl mx-auto text-left">
+        <div className="w-full flex justify-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-6xl px-6 pb-4 mx-auto">
             {/* Left Column */}
             <div className="flex flex-col items-center md:items-start">
               <button className="mb-6 px-6 py-2 rounded-full border border-gray-700 text-gray-400 text-sm hover:border-gray-600 transition-colors">
@@ -63,34 +63,34 @@ const Page = () => {
                 Are <span className="font-normal">Built Equal</span>
               </h2>
               
-              <p className="text-gray-400 text-base leading-relaxed">
+              <p className="text-gray-400 text-base text-left leading-relaxed">
                 Long-term platform success demands continuity, knowledge retention, and
                 proactive evolution—not just reactive fixes.
               </p>
             </div>
 
             {/* Right Column */}
-            <div className="space-y-4 pt-4 flex flex-col items-center md:items-start">
+            <div className="space-y-4 pt-4 flex flex-col justify-start items-start">
               <p className="text-gray-400 text-lg mb-4">
                 Shivneri offers a different kind of model:
               </p>
               
-              <div className="space-y-4 w-full">
-                <div className="flex items-center justify-center gap-4 py-3 border-b border-gray-800 w-full">
+              <div className="space-y-4 flex flex-col justify-start items-start w-full">
+                <div className="flex items-center justify-start gap-4 py-3 w-full">
                   <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
                   <p className="text-gray-300 text-lg">
                     Senior FTE talent, engaged from day one
                   </p>
                 </div>
                 
-                <div className="flex items-center justify-center gap-4 py-3 border-b border-gray-800 w-full">
+                <div className="flex items-center justify-start gap-4 py-3 w-full">
                   <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
                   <p className="text-gray-300 text-lg">
                     Modular teams that flex to fit
                   </p>
                 </div>
                 
-                <div className="flex items-center justify-center gap-4 py-3 border-b border-gray-800 w-full">
+                <div className="flex items-center justify-start gap-4 py-3 w-full">
                   <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
                   <p className="text-gray-300 text-lg">
                     Clear ownership from build to support
