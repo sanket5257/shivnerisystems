@@ -11,7 +11,7 @@ const Page = () => {
         <div className="max-w-7xl mx-auto">
           {/* Header Section */}
           <div className="mb-16">
-            <button className="mb-8 px-6 py-2 rounded-full border border-gray-700 text-white text-sm hover:border-gray-600 transition-colors">
+            <button className="mb-8 px-6 py-2 rounded-full border border-neutral-700 text-white text-sm hover:border-gray-600 transition-colors">
               The Shivneri Team Model
             </button>
             
@@ -33,9 +33,9 @@ const Page = () => {
             </div>
           </div>
           {/* Product Team Section */}
-          <div className="mb-8 border border-gray-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8">
+          <div className="mb-8 border border-neutral-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8">
             {/* Left Card - Product Team */}
-            <div className="rounded-2xl p-8 border border-gray-800 relative overflow-hidden">
+            <div className="rounded-2xl p-8 border border-neutral-800 relative overflow-hidden">
               <div className="absolute inset-0 opacity-40" style={{
                 backgroundImage: 'url(/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg)',
                 backgroundSize: 'cover',
@@ -60,36 +60,36 @@ const Page = () => {
               <div className="flex items-start gap-4 mb-6">
                 <span className="text-white text-sm mt-2">Application<br />Architect</span>
                 <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     UX/UI Designer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Front-End Developer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Back-End Developer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     QA & Test Engineer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Data Engineer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     AI Engineer
                   </div>
                 </div>
               </div>
-              <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-gray-400 text-sm">
+              <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-neutral-400 text-sm">
                 App Support & Operations
               </div>
             </div>
           </div>
 
           {/* Platform Team Section */}
-          <div className="border border-gray-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8 relative overflow-hidden">
+          <div className="border border-neutral-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8 relative overflow-hidden">
             {/* Left Card - Platform Team */}
-            <div className=" rounded-2xl p-8 border border-gray-800 relative overflow-hidden">
+            <div className=" rounded-2xl p-8 border border-neutral-800 relative overflow-hidden">
               <div className="absolute inset-0 opacity-40" style={{
                 backgroundImage: 'url(/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg)',
                 backgroundSize: 'cover',
@@ -114,21 +114,21 @@ const Page = () => {
               <div className="flex items-start gap-4 mb-6">
                 <span className="text-white text-sm mt-2">Platform<br />Architect</span>
                 <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Site Reliability Engineer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Cloud Engineer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Network Engineer
                   </div>
-                  <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
+                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
                     Infrastructure Engineer
                   </div>
                 </div>
               </div>
-              <div className="border border-gray-800 rounded-2xl px-6 py-4 text-center text-gray-400 text-sm">
+              <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-neutral-400 text-sm">
                 Platform Support & Operations
               </div>
             </div>

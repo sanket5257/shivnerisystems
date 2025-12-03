@@ -115,13 +115,13 @@ export default function UXUIShowcase() {
           <div
             key={service.id}
             
-            className="service-card relative w-full bg-linear-to-br from-black to-gray-500 rounded-3xl border border-gray-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transition-all duration-300"
+            className="service-card relative w-full bg-linear-to-br from-black to-neutral-900 rounded-3xl border border-neutral-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transition-all duration-300"
             
           >
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-gray-200 via-gray-500 to-gray-800 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-neutral-900 via-neutral-500 to-neutral-900 bg-clip-text text-transparent">
                   {service.title}
                 </h2>
 
@@ -140,7 +140,7 @@ export default function UXUIShowcase() {
               </div>
 
               <div className="flex items-center justify-center h-full">
-                <div className="video-container relative w-full h-full max-h-[300px] rounded-2xl overflow-hidden border border-gray-700 transition-all duration-300">
+                <div className="video-container relative w-full h-full max-h-[300px] rounded-2xl overflow-hidden border border-neutral-700 transition-all duration-300">
                   <video
                     autoPlay
                     loop
@@ -155,7 +155,7 @@ export default function UXUIShowcase() {
               </div>
             </div>
 
-            <div className="mt-8 border-t border-gray-800 pt-6">
+            <div className="mt-8 border-t border-neutral-800 pt-6">
               <button
                 className="btn-primary"
                 onClick={() => console.log(`Viewing project: ${service.title}`)}

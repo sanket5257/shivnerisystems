@@ -121,20 +121,20 @@ const ServicesSection = () => {
       <div className=" mx-auto px-8 lg:px-16">
         <img className='absolute -z-10 top-0 -right-80 size-200 contrast-125' src="/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg" alt="" />
        <div className="mb-10 z-50">
-          <div className="inline-block px-6 py-2 border border-gray-700 rounded-full text-sm text-gray-400 mb-8">
+          <div className="inline-block px-6 py-2 border border-neutral-700 rounded-full text-sm text-neutral-400 mb-8">
             Services
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight mb-4">
-            <span className="text-gray-500">It’s not just what we build</span>
+            <span className="text-neutral-500">It’s not just what we build</span>
           </h1>
           <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight">
             <span className="">it’z how we show up.</span>
           </h1>
           <div className="flex justify-end mt-8">
-            <button className="flex items-center gap-3 px-6 py-3 border border-gray-700 rounded-full hover:border-gray-500 transition-colors">
-              <span className="text-gray-400">Learn more</span>
-              <div className="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-gray-400">
+            <button className="flex items-center gap-3 px-6 py-3 border border-neutral-700 rounded-full hover:border-neutral-500 transition-colors">
+              <span className="text-neutral-400">Learn more</span>
+              <div className="w-8 h-8 rounded-full border border-neutral-700 flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-neutral-400">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>

@@ -49,11 +49,11 @@ const WhyUptic = () => {
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
         <div className="mb-10">
-          <div className="inline-block px-6 py-2 border border-gray-700 rounded-full text-sm text-gray-400 mb-8">
+          <div className="inline-block px-6 py-2 border border-neutral-700 rounded-full text-sm text-neutral-400 mb-8">
             Why Shivneri?
           </div>
           <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight mb-4">
-            <span className="text-gray-500">Because </span>
+            <span className="text-neutral-500">Because </span>
             <span className="">Getting it</span>
           </h1>
           <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight">
@@ -76,7 +76,7 @@ const WhyUptic = () => {
           {/* Full-Stack Engineering Card */}
           <div 
             ref={el => addToRefs(el, 0)}
-            className="group relative bg-gradient-to-b from-gray-900/50 to-black border border-gray-800/50 rounded-3xl p-8 overflow-hidden hover:border-gray-700/50 transition-all duration-500"
+            className="group relative bg-gradient-to-b from-neutral-900/50 to-black border border-neutral-800/50 rounded-3xl p-8 overflow-hidden hover:border-neutral-700/50 transition-all duration-500"
           >
             <div className="flex justify-between items-start mb-6">
               <h2 className="text-3xl font-light tracking-tight">
@@ -109,7 +109,7 @@ const WhyUptic = () => {
           {/* Flexible Teams Card */}
           <div 
             ref={el => addToRefs(el, 1)}
-            className="group relative bg-gradient-to-b from-gray-900/50 to-black border border-gray-800/50 rounded-3xl p-8 overflow-hidden hover:border-gray-700/50 transition-all duration-500"
+            className="group relative bg-gradient-to-b from-neutral-900/50 to-black border border-neutral-800/50 rounded-3xl p-8 overflow-hidden hover:border-neutral-700/50 transition-all duration-500"
           >
             <div className="flex justify-between items-start mb-6">
               <h2 className="text-3xl font-light tracking-tight">
@@ -142,7 +142,7 @@ const WhyUptic = () => {
           {/* Bottom Full-Width Card */}
           <div 
             ref={el => addToRefs(el, 2)}
-            className="group relative lg:col-span-2 bg-gradient-to-b from-gray-900/50 to-black border border-gray-800/50 rounded-3xl overflow-hidden hover:border-gray-700/50 transition-all duration-500"
+            className="group relative lg:col-span-2 bg-gradient-to-b from-neutral-900/50 to-black border border-neutral-800/50 rounded-3xl overflow-hidden hover:border-neutral-700/50 transition-all duration-500"
           >
             <div className="grid lg:grid-cols-2 gap-8">
               {/* Left: Video Background */}
@@ -163,14 +163,14 @@ const WhyUptic = () => {
                   <h2 className="text-3xl lg:text-4xl font-light tracking-tight">
                     We Build It. We Run It. We Innovate It.
                   </h2>
-                  <div className="w-10 h-10 rounded-full border border-gray-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-4">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-gray-400">
+                  <div className="w-10 h-10 rounded-full border border-neutral-700 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ml-4">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-neutral-400">
                       <path d="M3 13l10-10M13 3v10M13 3H3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
                 </div>
                 
-                <p className="text-gray-400 leading-relaxed text-lg">
+                <p className="text-neutral-400 leading-relaxed text-lg">
                   Uptic delivers full-lifecycle engineering — from secure platform foundations to scalable applications and continuous innovation. No handoffs. No context lost.
                 </p>
               </div>

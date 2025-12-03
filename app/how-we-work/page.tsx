@@ -33,16 +33,16 @@ const Page = () => {
         {/* Hero Section */}
         <div className="container mx-auto px-6 pt-40 pb-20 text-center">
           <div className="flex flex-col items-center max-w-4xl mx-auto">
-            <button className="mb-12 px-6 py-2 rounded-full border border-gray-700 text-gray-400 text-sm hover:border-gray-600 transition-colors">
+            <button className="mb-12 px-6 py-2 rounded-full border border-neutral-700 text-neutral-400 text-sm hover:border-gray-600 transition-colors">
               How we work
             </button>
             
-            <h1 className="text-6xl md:text-7xl font-semibold mb-8 leading-tight bg-gradient-to-r from-gray-200 via-gray-400 to-gray-600 text-transparent bg-clip-text">
+            <h1 className="text-6xl md:text-7xl font-semibold mb-8 leading-tight bg-gradient-to-r from-neutral-200 via-neutral-400 to-neutral-600 text-transparent bg-clip-text">
               A Better Way to<br />
               Build Software
             </h1>
             
-            <p className="text-gray-400 text-lg max-w-2xl">
+            <p className="text-neutral-400 text-lg max-w-2xl">
               A smarter model. Leaner teams. Faster outcomes. This is the new
               way to build, scale, and support software.
             </p>
@@ -54,7 +54,7 @@ const Page = () => {
           <div className="grid md:grid-cols-2 gap-16 items-center w-full max-w-6xl px-6 pb-4 mx-auto">
             {/* Left Column */}
             <div className="flex flex-col items-center md:items-start">
-              <button className="mb-6 px-6 py-2 rounded-full border border-gray-700 text-gray-400 text-sm hover:border-gray-600 transition-colors">
+              <button className="mb-6 px-6 py-2 rounded-full border border-neutral-700 text-neutral-400 text-sm hover:border-gray-600 transition-colors">
                 Choosing the Right Model
               </button>
               
@@ -71,28 +71,28 @@ const Page = () => {
 
             {/* Right Column */}
             <div className="space-y-4 pt-4 flex flex-col justify-start items-start">
-              <p className="text-gray-400 text-lg mb-4">
+              <p className="text-neutral-400 text-lg mb-4">
                 Shivneri offers a different kind of model:
               </p>
               
               <div className="space-y-4 flex flex-col justify-start items-start w-full">
                 <div className="flex items-center justify-start gap-4 py-3 w-full">
-                  <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
+                  <CheckCircle2 className="w-6 h-6 shrink-0 text-neutral-400" />
                   <p className="text-gray-300 text-lg">
                     Senior FTE talent, engaged from day one
                   </p>
                 </div>
                 
                 <div className="flex items-center justify-start gap-4 py-3 w-full">
-                  <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
-                  <p className="text-gray-300 text-lg">
+                  <CheckCircle2 className="w-6 h-6 shrink-0 text-neutral-400" />
+                  <p className="text-neutral-300 text-lg">
                     Modular teams that flex to fit
                   </p>
                 </div>
                 
                 <div className="flex items-center justify-start gap-4 py-3 w-full">
-                  <CheckCircle2 className="w-6 h-6 shrink-0 text-gray-400" />
-                  <p className="text-gray-300 text-lg">
+                  <CheckCircle2 className="w-6 h-6 shrink-0 text-neutral-400" />
+                  <p className="text-neutral-300 text-lg">
                     Clear ownership from build to support
                   </p>
                 </div>

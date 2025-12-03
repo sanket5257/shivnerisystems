@@ -206,11 +206,11 @@ const WorkSection = () => {
         {/* Title Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-7xl font-bold mb-4">
-            <span className="bg-gradient-to-b from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-white via-neutral-300 to-neutral-600 bg-clip-text text-transparent">
               Where stories
             </span>
             <br />
-            <span className="bg-gradient-to-b from-white via-gray-300 to-gray-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-b from-white via-neutral-300 to-neutral-600 bg-clip-text text-transparent">
               become experience
             </span>
           </h1>

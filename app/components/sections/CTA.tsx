@@ -23,13 +23,13 @@ export default function HeroSection() {
         <div className="flex-1 max-w-2xl">
           {/* TL;DR Badge */}
           <div className="inline-block mb-8">
-            <div className="px-5 py-2 border border-gray-600 rounded-full">
-              <span className="text-gray-400 text-sm tracking-wide">TL;DR</span>
+            <div className="px-5 py-2 border border-neutral-600 rounded-full">
+              <span className="text-neutral-400 text-sm tracking-wide">TL;DR</span>
             </div>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl lg:text-7xl font-light text-gray-300 leading-tight">
+          <h1 className="text-5xl lg:text-7xl font-light text-neutral-500 leading-tight">
             If you only read one thing,{' '}
             <span className="font-normal text-white">make it this.</span>
           </h1>
@@ -38,7 +38,7 @@ export default function HeroSection() {
         {/* Right Side - Description Card */}
         <div className="flex-1 max-w-xl ml-16">
           <div className="bg-black/30 backdrop-blur-md rounded-3xl p-10 border border-zinc-700/30">
-            <p className="text-gray-400 text-lg lg:text-3xl leading-relaxed mb-8">
+            <p className="text-neutral-400 text-lg lg:text-3xl leading-relaxed mb-8">
               Your fractional product team, full-time engineering partner, and zero-BS cloud experts.{' '}
               <span className="text-white font-medium">
                 We build it, ship it, and support it

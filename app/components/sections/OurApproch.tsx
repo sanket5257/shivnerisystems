@@ -68,12 +68,12 @@ const OurApproachSection = () => {
 
         {/* LEFT CONTENT */}
         <div className="space-y-8">
-          <span className="inline-block px-6 py-2 text-sm text-gray-300 border border-gray-700 rounded-full">
+          <span className="inline-block px-6 py-2 text-sm text-neutral-300 border border-neutral-700 rounded-full">
             Built for the Best. Trusted by Industry Leaders
           </span>
 
           <div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-gray-500">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-neutral-500">
               Proven across industries,
             </h2>
             <h3 className="text-5xl md:text-6xl lg:text-7xl font-semibold leading-tight text-white">
@@ -82,7 +82,7 @@ const OurApproachSection = () => {
             </h3>
           </div>
 
-          <p className="text-gray-400 max-w-3xl leading-relaxed">
+          <p className="text-neutral-400 max-w-3xl leading-relaxed">
             Our clients rely on us to architect, build, and scale high-performance systems that power their growth.
             Whether modernizing legacy apps, launching new platforms, or powering developer productivity, we deliver with
             precision, speed, and reliability.
@@ -91,7 +91,7 @@ const OurApproachSection = () => {
 
         {/* RIGHT — GSAP LOGO CAROUSEL */}
         <div className="flex items-center justify-center">
-          <div className="relative w-full max-w-md lg:max-w-lg h-64 rounded-[36px] overflow-hidden border border-gray-800 bg-linear-to-b from-black/60 via-black/50 to-black/40 p-6 flex items-center">
+          <div className="relative w-full max-w-md lg:max-w-lg h-64 rounded-[36px] overflow-hidden border border-neutral-800 bg-linear-to-b from-black/60 via-black/50 to-black/40 p-6 flex items-center">
 
             <div
               ref={trackRef}
