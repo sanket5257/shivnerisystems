@@ -4,21 +4,7 @@ import { Layers, Square } from 'lucide-react';
 const Page = () => {
   return (
     <div className="relative min-h-screen ">
-      {/* Video Background */}
-      <div className="absolute inset-0 w-full h-full z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="size-200 object-cover"
-        >
-          <source src="/assets/uptic-circle.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/50" />
-      </div>
+   
       
       {/* Content */}
       <div className="relative z-10 min-h-screen text-white py-12 px-6">
