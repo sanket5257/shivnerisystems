@@ -70,17 +70,57 @@ const CustomerStories = () => {
 
   return (
     <div className="min-h-screen bg-black text-white py-40 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-16 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-semibold
-           text-gray-300 mb-4">
-            Customer Stories
+        {/* Hero Section with Background Video */}
+      <div className="flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover opacity-50"
+          src="/assets/video_1.webm"
+        />
+        
+        {/* Overlay gradient */}
+        <div className=" bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
+        
+        {/* Content */}
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 ">
+          <div className="inline-block px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-300 mb-8">
+            Customer Success
+          </div>
+          <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight">
+            Real Results.
+            <br />
+            Measurable Impact.
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-3xl mx-auto">
-            Discover how we've helped businesses transform and scale
+            From scaling startups to modernizing global platforms, our work delivers value that lasts.
           </p>
         </div>
+        
+        {/* Decorative wave pattern at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 h-10 bg-gradient-to-t from-black to-transparent"></div>
+      </div>
+
+      {/* Secondary Header Section */}
+      <div className="bg-black py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="inline-block px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-300 mb-8">
+            This Is What Great Looks Like
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-normal leading-tight mb-4">
+            Explore how we accelerate
+            <br />
+            innovation, scale ambition
+            <br />
+            <span className="text-gray-600">and ensure continuity.</span>
+          </h2>
+        </div>
+      </div>
+      <div className="max-w-7xl mx-auto">
+       
 
         {/* Stories Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
