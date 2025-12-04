@@ -174,7 +174,7 @@ const JourneyTimeline = () => {
     <div className="bg-black text-white">
       {/* Hero Section with large title */}
       <div className=" flex items-center justify-center relative overflow-hidden journey-title">
-       <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold bg-gradient-to-r from-neutral-500 via-neutral-400 to-gray-300 bg-clip-text text-transparent tracking-tight relative z-10">
+       <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-7xl font-semibold bg-gradient-to-r from-neutral-500 via-neutral-400 to-gray-300 bg-clip-text text-transparent tracking-tight relative z-10">
           Our Journey
         </h1>
       </div>
