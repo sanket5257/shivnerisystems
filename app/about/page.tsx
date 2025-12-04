@@ -5,6 +5,7 @@ import Mvp from '../components/sections/Mvp';
 import Manifesto from '../components/sections/Manifesto';
 import Careears from '../components/sections/Careears';
 import Contact from '../components/sections/Contact';
+import Journey from '../components/sections/Journey';
 
 export default function UpticLanding() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -287,6 +288,7 @@ export default function UpticLanding() {
       </section>
               <Mvp/>
               <Manifesto/>
+              <Journey/>
               <Contact/>
               <Careears/>
       {/* Additional spacing */}
