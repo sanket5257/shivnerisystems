@@ -66,8 +66,8 @@ const JourneyTimeline = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'center center', // Start when container's center is at viewport's center
-          end: 'bottom top', // End when container's bottom reaches viewport's top
+          start: 'top 10%', // Start when the top of the container is 20% from the top of the viewport
+          end: 'bottom 20%', // End when the bottom of the container is 20% from the top of the viewport
           scrub: 1.5, // Smoother scrubbing
           pin: true,
           anticipatePin: 1,
@@ -89,13 +89,7 @@ const JourneyTimeline = () => {
       itemsRef.current.forEach((item, i) => {
         if (!item) return;
         
-        // Initial state with hardware acceleration
-        gsap.set(item, { 
-          opacity: 0, 
-          y: 20,
-          force3D: true,
-          willChange: 'opacity, transform' // Hint browser for better performance
-        });
+       
         
         // Calculate position in timeline (0 to 1)
         const position = i / (itemsRef.current.length - 1);
@@ -189,7 +183,9 @@ const JourneyTimeline = () => {
       <div ref={containerRef} className="relative" style={{ height: '100vh' }}>
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="h-full flex items-center relative">
-            <div ref={timelineRef} className="flex items-end gap-0 transition-transform duration-100 ease-linear relative">
+              <div ref={timelineRef} className="flex items-end gap-0 transition-transform duration-100 ease-linear relative">
+                {/* Horizontal connecting line behind nodes (moved to bottom) */}
+                <div className="absolute left-0 right-0 bottom-0 h-0.5 bg-white z-0 pointer-events-none" />
               {/* Company Timeline Label */}
               <div className="flex-shrink-0 flex items-end justify-center mb-32 md:mb-40 ml-8 md:ml-16 mr-8 md:mr-12">
                 <div className="border border-gray-700 rounded-full px-4 py-2 md:px-6 md:py-3 bg-black/50 backdrop-blur-sm transform rotate-90 origin-center">
