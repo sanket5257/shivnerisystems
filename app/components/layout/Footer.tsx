@@ -3,23 +3,45 @@ import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { FaLinkedin, FaTwitter, FaGithub, FaYoutube, FaFacebook } from 'react-icons/fa';
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import Link from 'next/link';
+
 export default function ModernFooter() {
-  const services = ['Development', 'Platforms', 'Operate & Innovate'];
-  const assessments = ['App Security & Compliance', 'Cloud Cost Optimization', 'Internal Developer Platforms'];
-  const company = ['Customer Stories', 'Partners', 'How We Work', 'Careers'];
-  const about = ['Our Mission', "Shivneri's Journey", 'Leadership Team', 'Contact'];
-  
+  const services = [
+    { name: 'Development', path: '/services/development' },
+    { name: 'Platforms', path: '/services/platforms' },
+    { name: 'Operate & Innovate', path: '/services/operate-innovate' }
+  ];
+
+  const assessments = [
+    { name: 'App Security & Compliance', path: '/assessments/security-compliance' },
+    { name: 'Cloud Cost Optimization', path: '/assessments/cloud-optimization' },
+    { name: 'Internal Developer Platforms', path: '/assessments/developer-platforms' }
+  ];
+
+  const company = [
+    { name: 'Customer Stories', path: '/company/customer-stories' },
+    { name: 'Partners', path: '/company/partners' },
+    { name: 'How We Work', path: '/company/how-we-work' },
+    { name: 'Careers', path: '/about#careers' }
+  ];
+
+  const about = [
+    { name: 'Our Mission', path: '/about/mission' },
+    { name: "Shivneri's Journey", path: '/about/journey' },
+    { name: 'Leadership Team', path: '/about/leadership' },
+    { name: 'Contact', path: '/contact' }
+  ];
+
   const contacts = [
     { region: 'India', phone: '+91 12345 67890' }
   ];
-  
+
   const legalLinks = [
-    'Privacy Policy',
-    'Cookie Policy',
-    'Code of Conduct',
-    'Sustainability Policy',
-    'Modern Slavery Policy',
-    'Cookie Settings'
+    { name: 'Privacy Policy', path: '/legal/privacy-policy' },
+    { name: 'Cookie Policy', path: '/legal/cookie-policy' },
+    { name: 'Code of Conduct', path: '/legal/code-of-conduct' },
+    { name: 'Sustainability Policy', path: '/legal/sustainability-policy' },
+    { name: 'Modern Slavery Policy', path: '/legal/modern-slavery-policy' },
+    { name: 'Cookie Settings', path: '/cookie-settings' }
   ];
 
   return (
@@ -29,15 +51,15 @@ export default function ModernFooter() {
         <div className="max-w-7xl mx-auto px-8 py-20">
           <div className="flex flex-col lg:flex-row gap-16 mb-16">
             <div className="lg:w-1/2">
-            <Link href="/" className="flex items-center mb-20">
-            <img 
-              src="../assets/images/logo2.png" 
-              alt="Logo" 
-              className="h-8 w-auto" 
-              width={120}
-              height={32}
-            />
-          </Link>
+              <Link href="/" className="flex items-center mb-20">
+                <img 
+                  src="../assets/images/logo2.png" 
+                  alt="Logo" 
+                  className="h-8 w-auto" 
+                  width={120}
+                  height={32}
+                />
+              </Link>
               <h2 className="text-5xl lg:text-6xl font-light leading-tight mb-6">
 
                 Let's build<br />
@@ -73,9 +95,9 @@ export default function ModernFooter() {
                   <ul className="space-y-3">
                     {services.map((item, i) => (
                       <li key={i}>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                          {item}
-                        </a>
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                          {item.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -87,9 +109,9 @@ export default function ModernFooter() {
                   <ul className="space-y-3">
                     {assessments.map((item, i) => (
                       <li key={i}>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                          {item}
-                        </a>
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                          {item.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -101,9 +123,9 @@ export default function ModernFooter() {
                   <ul className="space-y-3">
                     {company.map((item, i) => (
                       <li key={i}>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                          {item}
-                        </a>
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                          {item.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -115,9 +137,9 @@ export default function ModernFooter() {
                   <ul className="space-y-3">
                     {about.map((item, i) => (
                       <li key={i}>
-                        <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                          {item}
-                        </a>
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                          {item.name}
+                        </Link>
                       </li>
                     ))}
                   </ul>
@@ -138,7 +160,7 @@ export default function ModernFooter() {
 
                   {/* Email */}
                   <div>
-                    <a href="mailto:sayhello@uptic.io" className="text-gray-400 hover:text-white text-sm">
+                    <a href="mailto:sayhello@shivneri.com" className="text-gray-400 hover:text-white text-sm">
                       sayhello@shivneri.com
                     </a>
                   </div>
@@ -158,9 +180,9 @@ export default function ModernFooter() {
             <div className="flex flex-wrap gap-6 text-sm">
               {legalLinks.map((link, i) => (
                 <React.Fragment key={i}>
-                  <a href="#" className="text-gray-500 hover:text-gray-300">
-                    {link}
-                  </a>
+                  <Link href={link.path} className="text-gray-500 hover:text-gray-300">
+                    {link.name}
+                  </Link>
                   {i < legalLinks.length - 1 && <span className="text-gray-700">|</span>}
                 </React.Fragment>
               ))}
