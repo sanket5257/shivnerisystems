@@ -83,14 +83,13 @@ const CustomerStories = () => {
         />
         
         {/* Overlay gradient */}
-        <div className=" bg-gradient-to-b from-black/70 via-black/50 to-black"></div>
         
         {/* Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 ">
           <div className="inline-block px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-300 mb-8">
             Customer Success
           </div>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-semibold mb-6 leading-tight">
+          <h1 className="text-6xl md:text-7xl lg:text-7xl font-semibold mb-6 ">
             Real Results.
             <br />
             Measurable Impact.
@@ -106,7 +105,7 @@ const CustomerStories = () => {
 
       {/* Secondary Header Section */}
       <div className="bg-black py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
+        <div className="">
           <div className="inline-block px-4 py-2 border border-gray-700 rounded-full text-sm text-gray-300 mb-8">
             This Is What Great Looks Like
           </div>
