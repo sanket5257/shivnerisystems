@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 import Mvp from '../components/sections/Mvp';
 import Manifesto from '../components/sections/Manifesto';
 import Careears from '../components/sections/Careears';
+import Contact from '../components/sections/Contact';
 
 export default function UpticLanding() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -286,6 +287,7 @@ export default function UpticLanding() {
       </section>
               <Mvp/>
               <Manifesto/>
+              <Contact/>
               <Careears/>
       {/* Additional spacing */}
     </div>

@@ -28,7 +28,7 @@ export default function ModernFooter() {
     { name: 'Our Mission', path: '/about/mission' },
     { name: "Shivneri's Journey", path: '/about/journey' },
     { name: 'Leadership Team', path: '/about/leadership' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Contact', path: '/about#contact' }
   ];
 
   const contacts = [

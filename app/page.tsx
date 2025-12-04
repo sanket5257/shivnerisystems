@@ -6,6 +6,7 @@ import ModernizeText from './components/sections/ModernizeText';
 import OurApproch from './components/sections/OurApproch';
 import CTA from './components/sections/CTA';
 import Services from './components/sections/Services';
+import WhereWeWork from './components/sections/Contact';
 
 export default function Home() {
   return (
@@ -14,9 +15,9 @@ export default function Home() {
       <WhyUs />
       <ModernizeText />
       <Services/>
+      <WhereWeWork />
       <CTA />
       {/* <ServicesSection /> */}
-      {/* Add more sections here */}
     </main>
   );
 }
