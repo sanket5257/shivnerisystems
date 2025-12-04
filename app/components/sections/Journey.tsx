@@ -83,7 +83,7 @@ const JourneyTimeline = () => {
       });
       
       // Set initial transform
-      gsap.set(timelineRef.current, { x: 0, force3D: true });
+      gsap.set(timelineRef.current, { x:100, force3D: true });
 
       // Optimize item animations
       itemsRef.current.forEach((item, i) => {
@@ -168,7 +168,7 @@ const JourneyTimeline = () => {
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       };
     }
-  }, []);
+  }, []); 
 
   return (
     <div className="bg-black text-white">
@@ -189,7 +189,7 @@ const JourneyTimeline = () => {
               {/* Company Timeline Label */}
               <div className="flex-shrink-0 flex items-end justify-center mb-32 md:mb-40 ml-8 md:ml-16 mr-8 md:mr-12">
                 <div className="border border-gray-700 rounded-full px-4 py-2 md:px-6 md:py-3 bg-black/50 backdrop-blur-sm transform rotate-90 origin-center">
-                  <span className="text-xs md:text-sm text-gray-400 whitespace-nowrap">
+                  <span className="text-xs md:text-sm text-white whitespace-nowrap">
                     Company Timeline
                   </span>
                 </div>

@@ -15,7 +15,6 @@ export default function Home() {
       <WhyUs />
       <ModernizeText />
       <Services/>
-      <WhereWeWork />
       <CTA />
       {/* <ServicesSection /> */}
     </main>

@@ -115,13 +115,13 @@ export default function UXUIShowcase() {
           <div
             key={service.id}
             
-            className="service-card relative w-full bg-linear-to-br from-black to-neutral-900 rounded-3xl border border-neutral-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transition-all duration-300"
+            className="service-card story-card relative w-full bg-linear-to-br from-black to-neutral-900 rounded-3xl border border-neutral-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transition-all duration-300"
             
           >
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div className="space-y-8">
-                <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-neutral-900 via-neutral-500 to-neutral-900 bg-clip-text text-transparent">
+                <h2 className="text-4xl md:text-5xl font-bold bg-linear-to-r from-white to-neutral-900 bg-clip-text text-transparent">
                   {service.title}
                 </h2>
 
