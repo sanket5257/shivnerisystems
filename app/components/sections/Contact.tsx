@@ -12,17 +12,17 @@ const WhereWeWork = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-[#0a0a0a] text-white py-20 px-6">
+    <div id="contact" className="min-h-screen bg-[#0a0a0a] text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Header */}
-      <header className="justify-center flex pb-16">
+      <header className="flex justify-center pb-12 sm:pb-16">
         <button className="px-6 py-2 border border-gray-600 rounded-full text-gray-300 hover:border-gray-400 transition-colors">
           Contact
         </button>
       </header>
 
       {/* Title */}
-      <div className="text-center mb-16">
-        <h1 className="text-7xl lg:text-8xl font-semibold">
+      <div className="text-center mb-12 sm:mb-16">
+        <h1 className="text-5xl xs:text-6xl sm:text-7xl lg:text-8xl font-semibold leading-tight">
           <span className="text-neutral-500">Where</span>{' '}
           <span className="text-white">we</span>{' '}
           <span className="text-neutral-500">Work</span>
@@ -30,11 +30,11 @@ const WhereWeWork = () => {
       </div>
 
       {/* Location Card */}
-      <div className="max-w-6xl mx-auto mb-20">
-        <div className="bg-[#1a1a1a] rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all">
+      <div className="max-w-6xl mx-auto mb-16 sm:mb-20">
+        <div className="bg-[#1a1a1a] rounded-xl sm:rounded-2xl overflow-hidden border border-gray-800 hover:border-gray-700 transition-all">
           <div className="grid lg:grid-cols-2 gap-0">
             {/* Map Section */}
-            <div className="relative h-[400px] lg:h-[500px]">
+            <div className="relative h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px]">
               <iframe 
                 src={location.mapEmbed}
                 width="100%" 
@@ -46,7 +46,7 @@ const WhereWeWork = () => {
               />
               
               {/* Map Pin Overlay */}
-              <div className="absolute top-6 left-6">
+              <div className="absolute top-4 left-4 sm:top-6 sm:left-6">
                 <div className="w-10 h-10 bg-[#1a1a1a] rounded-full flex items-center justify-center border border-gray-700">
                   <MapPin className="w-5 h-5 text-gray-400" />
                 </div>
@@ -54,12 +54,12 @@ const WhereWeWork = () => {
             </div>
 
             {/* Info Section */}
-            <div className="p-12 flex flex-col justify-center">
-              <h3 className="text-4xl font-light mb-8">{location.city}</h3>
+            <div className="p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+              <h3 className="text-3xl sm:text-4xl font-light mb-6 sm:mb-8">{location.city}</h3>
               
               <div className="space-y-4">
                 {location.contacts.map((contact, idx) => (
-                  <div key={idx} className="flex justify-between items-center text-lg border-b border-gray-800 pb-4">
+                  <div key={idx} className="flex justify-between items-center text-base sm:text-lg border-b border-gray-800 pb-3 sm:pb-4">
                     <span className="text-gray-400">{contact.type}</span>
                     <span className="text-gray-300">{contact.phone}</span>
                   </div>
@@ -77,14 +77,14 @@ const WhereWeWork = () => {
       </div>
 
       {/* Bottom Contact Section */}
-      <div className="max-w-4xl mx-auto flex flex-col md:flex-row justify-center items-center gap-12 pt-12 border-t border-gray-800">
+      <div className="max-w-4xl mx-auto flex flex-col sm:flex-row justify-center items-center gap-8 sm:gap-10 md:gap-12 pt-8 sm:pt-10 md:pt-12 border-t border-gray-800 px-4 sm:px-6">
         {/* Support */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-[#1a1a1a] rounded-full flex items-center justify-center border border-gray-800">
+        <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#1a1a1a] rounded-full flex-shrink-0 flex items-center justify-center border border-gray-800">
             <Shield className="w-6 h-6 text-gray-400" />
           </div>
           <div>
-            <div className="text-gray-400 text-sm mb-1">Support</div>
+            <div className="text-gray-400 text-xs sm:text-sm mb-0.5 sm:mb-1">Support</div>
             <a href="mailto:sayhello@example.com" className="text-gray-300 hover:text-white transition-colors">
               sayhello@example.com
             </a>
@@ -92,12 +92,12 @@ const WhereWeWork = () => {
         </div>
 
         {/* Sales */}
-        <div className="flex items-center gap-4">
-          <div className="w-12 h-12 bg-[#1a1a1a] rounded-full flex items-center justify-center border border-gray-800">
+        <div className="flex items-center gap-3 sm:gap-4 w-full sm:w-auto justify-between sm:justify-start">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#1a1a1a] rounded-full flex-shrink-0 flex items-center justify-center border border-gray-800">
             <Lightbulb className="w-6 h-6 text-gray-400" />
           </div>
           <div>
-            <div className="text-gray-400 text-sm mb-1">Sales</div>
+            <div className="text-gray-400 text-xs sm:text-sm mb-0.5 sm:mb-1">Sales</div>
             <a href="mailto:sayhello@example.com" className="text-gray-300 hover:text-white transition-colors">
               sayhello@example.com
             </a>

@@ -136,7 +136,7 @@ export default function UpticLanding() {
   return (
     <div className="overflow-x-hidden bg-black text-white">
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center px-6">
+      <section ref={heroRef} className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6">
         {/* Background Grid */}
         <div className="bg-grid absolute top-50  justify-center pointer-events-none">
           <img 
@@ -152,13 +152,13 @@ export default function UpticLanding() {
             About Shivneri Systems
           </button>
           
-          <h1 className="text-6xl md:text-8xl font-semibold ">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold leading-tight">
             Bold Tech.
             <br />
             <span className="text-neutral-500">Built by People.</span>
           </h1>
           
-          <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
+          <p className="text-neutral-400 max-w-2xl mx-auto text-base sm:text-lg px-2 sm:px-0">
             We're a lean, global crew of engineers, architects, and coders building
             bold new apps and transforming legacy systems—with speed, security,
             and a little swagger.
@@ -171,7 +171,7 @@ export default function UpticLanding() {
       </section>
 
       {/* Services Section */}
-      <section ref={servicesRef} className="relative min-h-screen px-6 py-32">
+      <section ref={servicesRef} className="relative min-h-screen px-4 sm:px-6 py-20 md:py-32">
         <div className="w-full max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="section-title mb-32">
@@ -179,7 +179,7 @@ export default function UpticLanding() {
               Who We Are
             </button>
             
-            <h2 className="text-5xl md:text-7xl font-bold mb-4">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
               Not Your
               <br />
               Average <span className="text-neutral-500">Dev</span>
@@ -187,7 +187,7 @@ export default function UpticLanding() {
               <span className="text-neutral-500">& Cloud Shop</span>
             </h2>
             
-            <p className="text-neutral-400 max-w-xl text-lg mt-8">
+            <p className="text-neutral-400 max-w-xl text-base sm:text-lg mt-6 sm:mt-8">
               We're the team companies call when they need modern software
               that actually ships. From cloud-native builds to pipelines and
               automation, we architect your future while fixing what's holding
@@ -196,7 +196,7 @@ export default function UpticLanding() {
           </div>
 
           {/* 3D Cylinder with Cards */}
-          <div className="relative flex items-center justify-center min-h-[800px]">
+          <div className="relative flex items-center justify-center min-h-[600px] sm:min-h-[800px]">
             {/* Wireframe Cylinder */}
             <div 
               ref={cylinderRef}
@@ -246,30 +246,30 @@ export default function UpticLanding() {
             </div>
 
             {/* Service Cards */}
-            <div className="relative w-full max-w-6xl h-[800px]">
+            <div className="relative w-full max-w-6xl h-[600px] sm:h-[800px]">
               {services.map((service, index) => (
                 <div
                   key={index}
                   ref={service.ref}
                   className={`absolute ${
                     service.position === 'right' 
-                      ? 'right-0 md:right-10' 
-                      : 'left-0 md:left-10'
+                      ? 'right-0 sm:right-10' 
+                      : 'left-0 sm:left-10'
                   } ${
                     index === 0 
-                      ? 'top-[10%]' 
+                      ? 'top-[5%] sm:top-[10%]' 
                       : index === 1 
-                      ? 'top-[45%] -translate-y-1/2' 
-                      : 'top-[75%]'
-                  }`}
+                      ? 'top-[40%] sm:top-[45%] -translate-y-1/2' 
+                      : 'top-[70%] sm:top-[75%]'
+                  } w-full sm:w-auto px-4 sm:px-0`}
                 >
-                  <div className="bg-neutral-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-8 max-w-md hover:border-gray-700 transition-all hover:scale-105">
+                  <div className="bg-neutral-900/50 backdrop-blur-sm border border-gray-800 rounded-3xl p-6 sm:p-8 w-full max-w-md hover:border-gray-700 transition-all hover:scale-105">
                     <p className="text-white font-medium mb-3 text-lg">{service.question}</p>
                     <p className="text-gray-400">{service.answer}</p>
                   </div>
                   
                   {/* Connection dot */}
-                  <div className={`absolute top-1/2 -translate-y-1/2 ${
+                  <div className={`hidden sm:block absolute top-1/2 -translate-y-1/2 ${
                     service.position === 'right' 
                       ? '-left-12 md:-left-16' 
                       : '-right-12 md:-right-16'

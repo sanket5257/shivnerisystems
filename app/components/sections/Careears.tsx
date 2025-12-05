@@ -22,23 +22,23 @@ const CareersHero = () => {
   }, []);
 
   return (
-    <div id='careers' className="min-h-screen rounded-4xl bg-white flex flex-col">
+    <div id='careers' className="min-h-screen rounded-none sm:rounded-4xl bg-white flex flex-col">
       {/* Header */}
       <header className="">
          <div className="flex justify-center ">
-          <span className="px-6 py-2 mt-16 border border-gray-600 rounded-full text-gray-400 text-sm tracking-wider">
+          <span className="px-4 sm:px-6 py-1.5 sm:py-2 mt-12 sm:mt-16 border border-gray-600 rounded-full text-gray-400 text-xs sm:text-sm tracking-wider">
             Careers
           </span>
         </div>
       </header>
 
       {/* Hero Section */}
-      <div className="flex-1 flex items-center justify-center px-8 pb-32">
+      <div className="flex-1 flex items-center justify-center px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:pb-32">
         <div className="max-w-7xl w-full">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-10 sm:gap-12 md:gap-16 items-center">
             {/* Left Column */}
             <div>
-              <h1 className="text-6xl font-semibold lg:text-7xl mb-8">
+              <h1 className="text-4xl xs:text-5xl sm:text-6xl font-semibold lg:text-7xl mb-6 sm:mb-8 leading-tight">
                 <span className="text-neutral-500">Curious minds welcome.</span>
                 <br />
                 <span className="text-black">Egos left at the door.</span>
@@ -58,7 +58,7 @@ const CareersHero = () => {
             </div>
 
             {/* Right Column */}
-            <div className="space-y-8 text-neutral-600 text-lg leading-relaxed">
+            <div className="space-y-5 sm:space-y-6 md:space-y-8 text-neutral-600 text-base sm:text-lg leading-relaxed">
               <p>
                 We're always on the lookout for people who love solving problems, building fast, and staying human while doing it. If you're tired of red tape and ready for real impact — let's talk.
               </p>
@@ -72,23 +72,23 @@ const CareersHero = () => {
       </div>
 
       {/* Scrolling Text */}
-      <div className="overflow-hidden bg-gradient-to-t from-gray-300 to-transparent py-16">
+      <div className="overflow-hidden bg-gradient-to-t from-gray-300 to-transparent py-10 sm:py-14 md:py-16">
         <div 
           ref={scrollTextRef}
           className="flex whitespace-nowrap"
           style={{ width: '200%' }}
         >
           <div className="flex items-center">
-            <span className="text-8xl lg:text-9xl font-semibold text-gray-400 mr-32">
+            <span className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold text-gray-400 mr-12 sm:mr-16 md:mr-24 lg:mr-32">
               the Movement
             </span>
-            <span className="text-8xl lg:text-9xl font-semibold text-gray-300 mr-32">
+            <span className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold text-gray-300 mr-12 sm:mr-16 md:mr-24 lg:mr-32">
               Join the Movement
             </span>
-            <span className="text-8xl lg:text-9xl font-semibold text-gray-400 mr-32">
+            <span className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold text-gray-400 mr-12 sm:mr-16 md:mr-24 lg:mr-32">
               the Movement
             </span>
-            <span className="text-8xl lg:text-9xl font-semibold text-gray-300 mr-32">
+            <span className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-semibold text-gray-300 mr-12 sm:mr-16 md:mr-24 lg:mr-32">
               Join the Movement
             </span>
           </div>
