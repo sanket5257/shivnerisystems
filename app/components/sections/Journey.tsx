@@ -66,13 +66,12 @@ const JourneyTimeline = () => {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 10%', // Start when the top of the container is 20% from the top of the viewport
-          end: 'bottom 20%', // End when the bottom of the container is 20% from the top of the viewport
-          scrub: 1.5, // Smoother scrubbing
+          start: 'top 10%',
+          end: 'bottom 20%',
+          scrub: 1.5,
           pin: true,
           anticipatePin: 1,
           onUpdate: (self) => {
-            // Manual control for better performance
             const progress = self.progress;
             gsap.set(timelineRef.current, { 
               x: -maxScroll * progress,
@@ -89,9 +88,6 @@ const JourneyTimeline = () => {
       itemsRef.current.forEach((item, i) => {
         if (!item) return;
         
-       
-        
-        // Calculate position in timeline (0 to 1)
         const position = i / (itemsRef.current.length - 1);
         
         // Animate in with the main timeline for better performance
@@ -107,25 +103,15 @@ const JourneyTimeline = () => {
         const year = item.querySelector('.year-text');
         const title = item.querySelector('h3');
         const desc = item.querySelector('p');
-        const node = item.querySelector('.timeline-node');
         
-        if (node && year && title && desc) {
-          // Cache elements that don't change
+        if (year && title && desc) {
           const textElements = [year, title, desc];
           
           item.addEventListener('mouseenter', () => {
-            // Batch animations together for better performance
-            gsap.killTweensOf([node, ...textElements]);
-            
-            gsap.to(node, { 
-              scale: 1.5, 
-              backgroundColor: '#ffffff', 
-              duration: 0.3,
-              force3D: true
-            });
+            gsap.killTweensOf(textElements);
             
             gsap.to(textElements, { 
-              color: '#ffffff', 
+              color: '#fb923c', 
               duration: 0.3,
               stagger: 0.05,
               force3D: true
@@ -133,17 +119,10 @@ const JourneyTimeline = () => {
           });
 
           item.addEventListener('mouseleave', () => {
-            gsap.killTweensOf([node, year, title, desc]);
-            
-            gsap.to(node, { 
-              scale: 1, 
-              backgroundColor: '#ffffff', 
-              duration: 0.3,
-              force3D: true
-            });
+            gsap.killTweensOf([year, title, desc]);
             
             gsap.to(year, { 
-              color: '#6b7280', 
+              color: '#d1d5db', 
               duration: 0.3,
               force3D: true
             });
@@ -164,7 +143,6 @@ const JourneyTimeline = () => {
       });
 
       return () => {
-        // Cleanup ScrollTrigger instances
         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
       };
     }
@@ -173,23 +151,26 @@ const JourneyTimeline = () => {
   return (
     <div className="bg-black text-white">
       {/* Hero Section with large title */}
-      <div className="flex items-center justify-center relative overflow-hidden journey-title py-8 md:py-12">
-       <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-semibold bg-gradient-to-r from-neutral-500 via-neutral-400 to-gray-300 bg-clip-text text-transparent tracking-tight relative z-10 px-4 text-center">
+      <div className="flex items-center justify-center relative overflow-hidden journey-title py-16 md:py-24">
+        <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-900 to-black"></div>
+        <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold bg-gradient-to-br from-white via-gray-200 to-gray-500 bg-clip-text text-transparent tracking-tighter relative z-10 px-4 text-center">
           Our Journey
         </h1>
       </div>
 
       {/* Timeline Section */}
-      <div ref={containerRef} className="relative" style={{ minHeight: '100vh' }}>
+      <div ref={containerRef} className="relative bg-gradient-to-b from-black via-zinc-950 to-black" style={{ minHeight: '100vh' }}>
         <div className="sticky top-0 h-screen overflow-x-auto overflow-x-hidden">
           <div className="h-full flex items-center relative">
-              <div ref={timelineRef} className="flex items-end gap-0 transition-transform duration-100 ease-linear relative px-4 sm:px-6 md:px-8">
-                {/* Horizontal connecting line behind nodes (moved to bottom) */}
-                <div className="absolute left-4 right-4 bottom-0 h-0.5 bg-white z-0 pointer-events-none" />
+            <div ref={timelineRef} className="flex items-end gap-0 transition-transform duration-100 ease-linear relative px-4 sm:px-6 md:px-8">
+              {/* Horizontal connecting line behind nodes with gradient glow */}
+              <div className="absolute left-4 right-4 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-white to-transparent z-0 pointer-events-none" />
+              <div className="absolute left-4 right-4 bottom-0 h-[1px] bg-white blur-sm z-0 pointer-events-none" />
+            
               {/* Company Timeline Label */}
-              <div className="flex-shrink-0 flex items-end justify-center mb-24 sm:mb-32 md:mb-40 ml-4 sm:ml-8 md:ml-16 mr-4 sm:mr-8 md:mr-12">
-                <div className="border border-gray-700 rounded-full px-3 py-1.5 sm:px-4 sm:py-2 md:px-6 md:py-3 bg-black/50 backdrop-blur-sm transform rotate-90 origin-center">
-                  <span className="text-xs sm:text-sm text-white whitespace-nowrap">
+              <div className="flex-shrink-0 flex items-end justify-center mb-24 sm:mb-32 md:mb-40 ml-4 sm:ml-8 md:ml-16 mr-8 sm:mr-12 md:mr-16">
+                <div className="border border-gray-600/50 rounded-full px-4 py-2 sm:px-5 sm:py-2.5 md:px-7 md:py-3 bg-gradient-to-br from-zinc-900/80 to-black/80 backdrop-blur-md transform rotate-90 origin-center shadow-2xl">
+                  <span className="text-xs sm:text-sm md:text-base text-gray-300 whitespace-nowrap font-medium tracking-wide">
                     Company Timeline
                   </span>
                 </div>
@@ -199,11 +180,11 @@ const JourneyTimeline = () => {
                 <div 
                   key={index} 
                   ref={(el: HTMLDivElement | null) => { if (el) itemsRef.current[index] = el; }}
-                  className="flex-shrink-0 w-[260px] xs:w-[280px] sm:w-[320px] md:w-[380px] lg:w-[420px] relative timeline-item px-2 sm:px-4"
+                  className="flex-shrink-0 w-[280px] xs:w-[300px] sm:w-[340px] md:w-[400px] lg:w-[440px] relative timeline-item px-2 sm:px-4"
                 >
                   {/* Content Card - Above the timeline */}
-                  <div className="mb-32 sm:mb-40 md:mb-48 px-3 sm:px-4 md:px-6">
-                    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-4xl font-light mb-2 sm:mb-3 md:mb-4 text-white leading-tight tracking-tight">
+                  <div className="mb-32 sm:mb-40 md:mb-48 px-4 sm:px-5 md:px-7 py-6 sm:py-7 md:py-8 rounded-2xl bg-gradient-to-br from-zinc-900/40 to-black/40 backdrop-blur-sm border border-gray-800/50 hover:border-orange-500/70 hover:shadow-[0_0_30px_rgba(251,146,60,0.3)] transition-all duration-500 shadow-xl hover:shadow-2xl">
+                    <h3 className="text-2xl xs:text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 md:mb-5 text-white leading-tight tracking-tight">
                       {milestone.title.split(' ').map((word, i) => (
                         <React.Fragment key={i}>
                           {word}
@@ -211,24 +192,19 @@ const JourneyTimeline = () => {
                         </React.Fragment>
                       ))}
                     </h3>
-                    <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed">
+                    <p className="text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
                       {milestone.description}
                     </p>
                   </div>
                   
-                  {/* Timeline Node - Circle on the line */}
-                  <div className="absolute bottom-28 xs:bottom-28 sm:bottom-32 md:bottom-40 left-1/2 transform -translate-x-1/2 z-10">
-                    <div className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 rounded-full bg-white border-2 border-gray-700 timeline-node transition-all duration-300"></div>
-                  </div>
-                  
-                  {/* Vertical Line from node to year */}
-                  <div className="absolute ml-5 bottom-0 left-1/2 transform -translate-x-1/2 w-px h-24 xs:h-28 sm:h-40 md:h-44 bg-white"></div>
+                  {/* Vertical Line from card to year with gradient */}
+                  <div className="absolute ml-10 bottom-0 left-1/2 transform -translate-x-1/2 w-[2px] h-28 xs:h-32 sm:h-44 md:h-52 bg-gradient-to-b from-white to-gray-600"></div>
                   
                   {/* Year Display - Vertical, below the line */}
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pt-2">
-                    <div className="flex flex-col items-center space-y-0 text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-5xl font-semibold bg-gradient-to-r from-gray-400 via-gray-500 to-gray-600 bg-clip-text text-transparent leading-none tracking-tighter year-text transition-all duration-300">
+                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 pt-4">
+                    <div className="flex flex-col items-center space-y-0 text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-6xl font-black bg-gradient-to-b from-white via-gray-300 to-gray-600 bg-clip-text text-transparent leading-none tracking-tighter year-text transition-all duration-300">
                       {milestone.year.split('').map((char, i) => (
-                        <div key={i} className="leading-[0.85]">{char}</div>
+                        <div key={i} className="leading-[0.8]">{char}</div>
                       ))}
                     </div>
                   </div>

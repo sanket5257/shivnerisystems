@@ -12,7 +12,7 @@ const WhereWeWork = () => {
   };
 
   return (
-    <div id="contact" className="min-h-screen bg-[#0a0a0a] text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+    <div id="contact" className="min-h-screen bg-black text-white py-12 sm:py-16 md:py-20 px-4 sm:px-6">
       {/* Header */}
       <header className="flex justify-center pb-12 sm:pb-16">
         <button className="px-6 py-2 border border-gray-600 rounded-full text-gray-300 hover:border-gray-400 transition-colors">
