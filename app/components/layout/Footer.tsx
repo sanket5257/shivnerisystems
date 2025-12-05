@@ -53,7 +53,7 @@ export default function ModernFooter() {
           autoPlay 
           loop 
           muted
-          playsInline
+          
           style={{
             position: 'absolute',
             top: '50%',
