@@ -3,7 +3,7 @@ import { Users, Database } from 'lucide-react';
 
 export default function OrgChart() {
   return (
-    <div className="min-h-screen bg-black text-gray-400 p-16">
+    <div className="min-h-screen mb-22 bg-black text-gray-400 p-16">
 
       <div className="mb-16">
         <button className="mb-8 px-6 py-2 rounded-full border border-neutral-700 text-white text-sm hover:border-gray-600 transition-colors">
@@ -29,7 +29,7 @@ export default function OrgChart() {
         </div>
       </div>
 
-      <div className="max-w-4xl w-full relative overflow-visible">
+      <div className="max-w-4xl w-full relative ">
 
         <div className="absolute -right-[350px] top-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none z-0 overflow-visible">
   <div className="absolute inset-0 rounded-full border-r-2 border-white/50 bg-gradient-to-br from-white/5 via-transparent to-transparent circle-gloss"></div>
