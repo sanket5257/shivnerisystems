@@ -1,154 +1,168 @@
 import React from 'react';
-import { Layers, Square } from 'lucide-react';
+import { Users, Database } from 'lucide-react';
 
-const Page = () => {
+export default function OrgChart() {
   return (
-    <div className="relative min-h-screen ">
-   
-      
-      {/* Content */}
-      <div className="relative z-10 min-h-screen text-white py-12 px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Header Section */}
-          <div className="mb-16">
-            <button className="mb-8 px-6 py-2 rounded-full border border-neutral-700 text-white text-sm hover:border-gray-600 transition-colors">
-              The Shivneri Team Model
-            </button>
-            
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-2 text-white">
-                  Your Full-Stack
-                </h1>
-                <h1 className="text-5xl md:text-6xl font-semibold leading-tight text-white">
-                  Product + Platform Team
-                </h1>
-              </div>
-              
-              <div>
-                <p className="text-white text-base leading-relaxed">
-                  We blend product thinkers, engineers, and platform specialists into one high-performing unit. Skills roll on and off based on need—not arbitrary staffing.
-                </p>
-              </div>
-            </div>
-          </div>
-          {/* Product Team Section */}
-          <div className="mb-8 border border-neutral-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8">
-            {/* Left Card - Product Team */}
-            <div className="rounded-2xl p-8 border border-neutral-800 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-40" style={{
-                backgroundImage: 'url(/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }} />
-              <div className="relative z-10">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6">
-                  <Square className="w-6 h-6 text-white" />
-                </div>
-                <div className="relative z-10">
-                  <h2 className="text-3xl font-semibold text-white mb-4">Product Team</h2>
-                  <p className="text-white text-sm leading-relaxed">
-                    Designs and builds the user-facing features, interfaces, and experiences that bring ideas to life.
-                  </p>
-                </div>
-              </div>
-            </div>
+    <div className="min-h-screen bg-black text-gray-400 p-16">
 
-            {/* Right Side - Roles Grid */}
-            <div className="flex flex-col justify-between">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="text-white text-sm mt-2">Application<br />Architect</span>
-                <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    UX/UI Designer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Front-End Developer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Back-End Developer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    QA & Test Engineer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Data Engineer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    AI Engineer
-                  </div>
-                </div>
-              </div>
-              <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-neutral-400 text-sm">
-                App Support & Operations
-              </div>
-            </div>
+      <div className="mb-16">
+        <button className="mb-8 px-6 py-2 rounded-full border border-neutral-700 text-white text-sm hover:border-gray-600 transition-colors">
+          The Shivneri Team Model
+        </button>
+
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 className="text-5xl md:text-6xl font-semibold leading-tight mb-2 text-white">
+              Your Full-Stack
+            </h1>
+            <h1 className="text-5xl md:text-6xl font-semibold leading-tight text-white">
+              Product + Platform Team
+            </h1>
           </div>
 
-          {/* Platform Team Section */}
-          <div className="border border-neutral-800 rounded-3xl p-8 grid md:grid-cols-[400px_1fr] gap-8 relative overflow-hidden">
-            {/* Left Card - Platform Team */}
-            <div className=" rounded-2xl p-8 border border-neutral-800 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-40" style={{
-                backgroundImage: 'url(/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg)',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
-                backgroundRepeat: 'no-repeat'
-              }} />
-              <div className="relative z-10">
-                <div className="w-12 h-12  rounded-xl flex items-center justify-center mb-6">
-                  <Layers className="w-6 h-6 text-white" />
-                </div>
-                <div className="relative z-10">
-                  <h2 className="text-3xl font-semibold text-white mb-4">Platform Team</h2>
-                  <p className="text-white text-sm leading-relaxed">
-                    Delivers the cloud infrastructure, automation, and tools that enable secure, scalable, and efficient product delivery.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Roles Grid */}
-            <div className="flex flex-col justify-between">
-              <div className="flex items-start gap-4 mb-6">
-                <span className="text-white text-sm mt-2">Platform<br />Architect</span>
-                <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Site Reliability Engineer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Cloud Engineer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Network Engineer
-                  </div>
-                  <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-white text-sm">
-                    Infrastructure Engineer
-                  </div>
-                </div>
-              </div>
-              <div className="border border-neutral-800 rounded-2xl px-6 py-4 text-center text-neutral-400 text-sm">
-                Platform Support & Operations
-              </div>
-            </div>
-
-            {/* Right Side Text (Automation & Security) */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-              <div className="flex gap-32">
-                <span className="text-white text-sm tracking-widest origin-center rotate-90 whitespace-nowrap">
-                  Automation
-                </span>
-                <span className="text-white text-sm tracking-widest origin-center rotate-90 whitespace-nowrap">
-                  Security
-                </span>
-              </div>
-            </div>
+          <div>
+            <p className="text-white text-base leading-relaxed">
+              We blend product thinkers, engineers, and platform specialists into one high-performing unit.
+              Skills roll on and off based on need—not arbitrary staffing.
+            </p>
           </div>
         </div>
       </div>
+
+      <div className="max-w-4xl w-full relative overflow-visible">
+
+        <div className="absolute -right-[350px] top-1/2 -translate-y-1/2 w-[700px] h-[700px] pointer-events-none z-0 overflow-visible">
+  <div className="absolute inset-0 rounded-full border-r-2 border-white/50 bg-gradient-to-br from-white/5 via-transparent to-transparent circle-gloss"></div>
+
+  <div className="absolute right-[120px] top-1/2 -translate-y-1/2 -rotate-90 origin-center">
+    <span className="text-gray-400 text-sm tracking-[0.4em] font-light">Automation</span>
+  </div>
+</div>
+
+
+        {/* INNER ARC (Security) */}
+        <div className="absolute -right-[225px] top-1/2 -translate-y-1/2 w-[450px] h-[450px] pointer-events-none z-0 overflow-hidden">
+          <div className="absolute inset-0 border-r-2 border-white rounded-r-full circle-gloss"></div>
+          <div className="absolute right-[80px] top-1/2 -translate-y-1/2 -rotate-90 origin-center">
+            <span className="text-gray-400 text-sm tracking-[0.4em] font-light">Security</span>
+          </div>
+        </div>
+
+        <div className="relative z-10 space-y-5">
+
+          {/* PRODUCT TEAM */}
+          <div className="border border-white/20 rounded-[28px] p-1 bg-black glossy-shine">
+            <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-5 p-5">
+
+              {/* LEFT CARD */}
+              <div className="border border-white/20 rounded-[20px] p-6 bg-black glossy-shine">
+                <div className="w-12 h-12 border border-white/20 rounded-xl flex items-center justify-center mb-6 bg-gray-900/30">
+                  <Users className="w-6 h-6 text-gray-500" />
+                </div>
+
+                <h2 className="text-[28px] font-light text-gray-200 mb-3 tracking-tight">
+                  Product Team
+                </h2>
+
+                <p className="text-gray-500 leading-relaxed text-[14px]">
+                  Designs and builds user-facing features, interfaces, and experiences.
+                </p>
+              </div>
+
+              {/* ROLES */}
+              <div className="flex flex-col justify-center space-y-4">
+
+                <div className="text-center mb-1">
+                  <div className="text-gray-500 text-[14px] font-light leading-tight">
+                    Application<br />Architect
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    "UX/UI Designer",
+                    "Front-End Developer",
+                    "Back-End Developer",
+                    "QA & Test Engineer",
+                    "Data Engineer",
+                    "AI Engineer",
+                  ].map((role, idx) => (
+                    <div
+                      key={idx}
+                      className="border border-white/20 rounded-[16px] px-4 py-3 text-center bg-black hover:border-white/30 transition-colors glossy-shine"
+                    >
+                      <span className="text-gray-400 text-[13px] font-light">{role}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border border-white/20 rounded-[16px] px-4 py-3 text-center bg-black hover:border-white/30 transition-colors glossy-shine">
+                  <span className="text-gray-400 text-[13px] font-light">
+                    App Support & Operations
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          {/* PLATFORM TEAM */}
+          <div className="border border-white/20 rounded-[28px] p-1 bg-black glossy-shine">
+            <div className="grid grid-cols-1 lg:grid-cols-[350px_1fr] gap-5 p-5">
+
+              {/* LEFT CARD */}
+              <div className="border border-white/20 rounded-[20px] p-6 bg-black glossy-shine">
+                <div className="w-12 h-12 border border-white/20 rounded-xl flex items-center justify-center mb-6 bg-gray-900/30">
+                  <Database className="w-6 h-6 text-gray-500" />
+                </div>
+
+                <h2 className="text-[28px] font-light text-gray-200 mb-3 tracking-tight">
+                  Platform Team
+                </h2>
+
+                <p className="text-gray-500 leading-relaxed text-[14px]">
+                  Provides infrastructure, automation, and tooling for secure and scalable delivery.
+                </p>
+              </div>
+
+              {/* ROLES */}
+              <div className="flex flex-col justify-center space-y-4">
+
+                <div className="text-center mb-1">
+                  <div className="text-gray-500 text-[14px] font-light leading-tight">
+                    Platform<br />Architect
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    "Site Reliability Engineer",
+                    "Cloud Engineer",
+                    "Network Engineer",
+                    "Infrastructure Engineer",
+                  ].map((role, idx) => (
+                    <div
+                      key={idx}
+                      className="border border-white/20 rounded-[16px] px-4 py-3 text-center bg-black hover:border-white/30 transition-colors glossy-shine"
+                    >
+                      <span className="text-gray-400 text-[13px] font-light">{role}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="border border-white/20 rounded-[16px] px-4 py-3 text-center bg-black hover:border-white/30 transition-colors glossy-shine">
+                  <span className="text-gray-400 text-[13px] font-light">
+                    Platform Support & Operations
+                  </span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
     </div>
   );
-};
-
-export default Page;
+}

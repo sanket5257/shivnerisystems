@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 
 const BookingModal = dynamic(() => import('../BookingModal'), { ssr: false });
 
@@ -40,10 +41,10 @@ export default function UpticHero() {
             >
               Book a meeting
             </button>
-            <button className="w-full sm:w-auto px-6 py-2.5 sm:px-8 sm:py-3 border border-neutral-700 rounded-lg hover:border-neutral-500 transition flex items-center justify-center space-x-2 group">
+            <Link href="/services" className="w-full sm:w-auto px-6 py-2.5 sm:px-8 sm:py-3 border border-neutral-700 rounded-lg hover:border-neutral-500 transition flex items-center justify-center space-x-2 group">
               <span>Our services</span>
               <span className="transform group-hover:translate-x-1 transition">→</span>
-            </button>
+            </Link>
           </div>
         </div>
         

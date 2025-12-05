@@ -3,6 +3,7 @@
 import React, { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import Link from 'next/link';
 
 const WhyUptic = () => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -60,14 +61,14 @@ const WhyUptic = () => {
             <span>Built isn't Enough.</span>
           </h1>
           <div className="flex justify-end mt-6 sm:mt-8">
-            <button className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 rounded-full hover:border-gray-500 transition-colors text-sm sm:text-base">
+            <Link href="/how-we-work" className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 rounded-full hover:border-gray-500 transition-colors text-sm sm:text-base">
               <span className="text-gray-400">Explore how we work</span>
               <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-gray-400 w-3.5 h-3.5 sm:w-4 sm:h-4">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-            </button>
+            </Link>
           </div>
         </div>
 

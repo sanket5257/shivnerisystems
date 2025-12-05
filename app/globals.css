@@ -107,3 +107,32 @@ body {
 }
 
 
+.glossy-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.glossy-shine::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 250%;
+  height: 250%;
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 30%,
+    rgba(255,255,255,0.15) 50%,
+    rgba(255,255,255,0) 70%
+  );
+  transform: rotate(15deg);
+  animation: glossyMove 5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes glossyMove {
+  0% { transform: translate(-100%, -100%) rotate(15deg); }
+  100% { transform: translate(100%, 100%) rotate(15deg); }
+}
+
+
