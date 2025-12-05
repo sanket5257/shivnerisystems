@@ -45,25 +45,25 @@ const WhyUptic = () => {
   };
 
   return (
-    <section className="min-h-screen bg-black text-white px-8 py-16 lg:px-12 lg:py-24">
+    <section className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
       <div className="max-w-[1600px] mx-auto">
         {/* Header */}
-        <div className="mb-10">
-          <div className="inline-block px-6 py-2 border border-neutral-700 rounded-full text-sm text-neutral-400 mb-8">
+        <div className="mb-8 sm:mb-10">
+          <div className="inline-block px-4 sm:px-6 py-1.5 sm:py-2 border border-neutral-700 rounded-full text-xs sm:text-sm text-neutral-400 mb-6 sm:mb-8">
             Why Shivneri?
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight mb-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight mb-3 sm:mb-4">
             <span className="text-neutral-500">Because </span>
-            <span className="">Getting it</span>
+            <span>Getting it</span>
           </h1>
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight">
-            <span className="">Built isn't Enough.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight">
+            <span>Built isn't Enough.</span>
           </h1>
-          <div className="flex justify-end mt-8">
-            <button className="flex items-center gap-3 px-6 py-3 border border-gray-700 rounded-full hover:border-gray-500 transition-colors">
+          <div className="flex justify-end mt-6 sm:mt-8">
+            <button className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 border border-gray-700 rounded-full hover:border-gray-500 transition-colors text-sm sm:text-base">
               <span className="text-gray-400">Explore how we work</span>
-              <div className="w-8 h-8 rounded-full border border-gray-700 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-gray-400">
+              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-gray-400 w-3.5 h-3.5 sm:w-4 sm:h-4">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
@@ -72,11 +72,11 @@ const WhyUptic = () => {
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols- 2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {/* Full-Stack Engineering Card */}
           <div 
             ref={el => addToRefs(el, 0)}
-            className="group relative bg-gradient-to-b from-neutral-900/50 to-black border border-neutral-800/50 rounded-3xl p-8 overflow-hidden hover:border-neutral-700/50 transition-all duration-500"
+            className="group relative bg-gradient-to-b from-neutral-900/50 to-black border border-neutral-800/50 rounded-2xl sm:rounded-3xl p-5 sm:p-6 md:p-8 overflow-hidden hover:border-neutral-700/50 transition-all duration-500"
           >
             <div className="flex justify-between items-start mb-6">
               <h2 className="text-3xl font-light tracking-tight">

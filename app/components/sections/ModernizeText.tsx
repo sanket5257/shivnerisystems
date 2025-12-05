@@ -63,14 +63,14 @@ const ScrollTextEffect = () => {
   const words = text.split(/(\s+)/).filter(word => word.trim() !== '' || word.includes('\n'));
   
   return (
-    <div className=" bg-black">
+    <div className="bg-black">
       {/* Spacer to enable scrolling */}
       
-      <section className="flex items-center justify-center px-6 ">
-        <div className="max-w-6xl h-screen mx-auto">
+      <section className="flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32">
+        <div className="max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto w-full">
           <h2 
             ref={textRef}
-            className="text-5xl pt-40 md:text-6xl lg:text-7xl font-semibold leading-tight text-center"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-tight text-center pt-16 sm:pt-20 md:pt-24 lg:pt-32"
           >
             {words.map((word, wordIndex) => (
               <React.Fragment key={wordIndex}>
@@ -86,14 +86,26 @@ const ScrollTextEffect = () => {
                           opacity: 0.3,
                           color: '#666666',
                           display: 'inline-block',
-                          willChange: 'transform, opacity, text-shadow, color'
+                          willChange: 'transform, opacity, text-shadow, color',
+                          whiteSpace: 'pre-wrap',
+                          wordBreak: 'break-word'
                         }}
                       >
                         {char}
                       </span>
                     ))}
                     {wordIndex < words.length - 1 && words[wordIndex + 1] !== '\n' && (
-                      <span className="char" style={{ opacity: 0.3, color: '#666666' }}> </span>
+                      <span 
+                      className="char" 
+                      style={{ 
+                        opacity: 0.3, 
+                        color: '#666666',
+                        whiteSpace: 'pre-wrap',
+                        wordBreak: 'break-word'
+                      }}
+                    > 
+                      {' '}
+                    </span>
                     )}
                   </>
                 )}

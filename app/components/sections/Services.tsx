@@ -117,24 +117,28 @@ const ServicesSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 relative overflow-hidden">
-      <div className=" mx-auto px-8 lg:px-16">
-        <img className='absolute -z-10 top-0 -right-80 size-200 contrast-125' src="/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg" alt="" />
-       <div className="mb-10 z-50">
-          <div className="inline-block px-6 py-2 border border-neutral-700 rounded-full text-sm text-neutral-400 mb-8">
+    <section ref={sectionRef} className="py-12 sm:py-16 md:py-20 lg:py-24 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <img 
+          className='absolute -z-10 top-0 -right-40 sm:-right-60 md:-right-80 w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] contrast-125' 
+          src="/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg" 
+          alt="" 
+        />
+        <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 z-50">
+          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-700 rounded-full text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6 md:mb-8">
             Services
           </div>
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight mb-4">
-            <span className="text-neutral-500">It’s not just what we build</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight mb-3 sm:mb-4">
+            <span className="text-neutral-500">It's not just what we build</span>
           </h1>
-          <h1 className="text-5xl md:text-7xl lg:text-7xl font-semibold tracking-tight">
-            <span className="">it’z how we show up.</span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight">
+            <span>it'z how we show up.</span>
           </h1>
-          <div className="flex justify-end mt-8">
-            <button className="flex items-center gap-3 px-6 py-3 border border-neutral-700 rounded-full hover:border-neutral-500 transition-colors">
+          <div className="flex justify-end mt-6 sm:mt-8">
+            <button className="flex items-center gap-2 sm:gap-3 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-neutral-700 rounded-full hover:border-neutral-500 transition-colors text-sm sm:text-base">
               <span className="text-neutral-400">Learn more</span>
-              <div className="w-8 h-8 rounded-full border border-neutral-700 flex items-center justify-center">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="text-neutral-400">
+              <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-neutral-400 w-3.5 h-3.5 sm:w-4 sm:h-4">
                   <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
@@ -144,18 +148,18 @@ const ServicesSection = () => {
 
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-0">
           {services.map((service, index) => (
             <div key={service.id} className={`relative group ${
-              // First row: 2 items, each spans 3 columns
-              index < 2 ? 'md:col-span-3' : 
-              // Second row: 3 items, each spans 2 columns
-              index < 5 ? 'md:col-span-2' :
-              // Third row: 2 items, each spans 3 columns
-              'md:col-span-3'
+              // First row: 2 items, each spans 3 columns on medium screens and up
+              index < 2 ? 'sm:col-span-1 lg:col-span-3' : 
+              // Second row: 3 items, each spans 2 columns on large screens and up
+              index < 5 ? 'sm:col-span-1 lg:col-span-2' :
+              // Third row: 2 items, each spans 3 columns on large screens and up
+              'sm:col-span-1 lg:col-span-3'
             }`}>
               <svg 
-                className="absolute top-4 left-2 w-10 h-10 opacity-80 group-hover:opacity-100 transition-all duration-300 z-10"
+                className="absolute top-3 sm:top-4 left-2 w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 opacity-80 group-hover:opacity-100 transition-all duration-300 z-10"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -168,14 +172,26 @@ const ServicesSection = () => {
                 />
               </svg>
               <article 
-                className="h-[400px] bg-black/40 backdrop-blur-sm p-8 transition-all duration-500 hover:bg-black/80 border border-white/30 relative overflow-hidden group cursor-pointer flex flex-col"
+                className="h-[300px] sm:h-[350px] md:h-[400px] bg-black/40 backdrop-blur-sm p-4 sm:p-6 md:p-8 transition-all duration-500 hover:bg-black/80 border border-white/30 relative overflow-hidden group cursor-pointer flex flex-col"
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={() => handleMouseLeave(index)}
+                onClick={() => {
+                  // Toggle video on mobile tap
+                  if (window.innerWidth < 768) {
+                    if (playingIndex === index) {
+                      handleMouseLeave(index);
+                    } else {
+                      handleMouseEnter(index);
+                    }
+                  }
+                }}
               >
                 {service.videoSrc && (
                   <div 
                     ref={el => { videoRefs.current[index] = el; }}
-                    className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                    className={`absolute inset-0 w-full h-full ${
+                      playingIndex === index ? 'opacity-100' : 'opacity-0'
+                    } md:group-hover:opacity-100 transition-opacity duration-500`}
                   >
                     <video 
                       className="w-full h-full object-cover" 
@@ -193,9 +209,9 @@ const ServicesSection = () => {
                 <div className="flex-1"></div> {/* This pushes the content to the bottom */}
                 
                 <div className="relative z-10 mt-auto">
-                  <h3 className="text-2xl font-semibold text-white mb-3">{service.title}</h3>
+                  <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2 sm:mb-3">{service.title}</h3>
                   <div className="overflow-hidden">
-                    <p className="text-gray-300/80 text-xl leading-relaxed transition-all duration-300 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    <p className="text-gray-300/80 text-base sm:text-lg md:text-xl leading-relaxed transition-all duration-300 transform md:translate-y-4 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100">
                       {service.description}
                     </p>
                   </div>

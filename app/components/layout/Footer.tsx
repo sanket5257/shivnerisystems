@@ -45,57 +45,96 @@ export default function ModernFooter() {
   ];
 
   return (
-    <footer className="relative overflow-hidden  text-white">
-      <video className='object-cover overflow-hidden' src="/assets/Homepage X Hero Video (1).mp4" autoPlay loop muted></video>
-      <div className="border-t absolute top-0 bottom-0 left-0 right-0 backdrop-blur-xl border-white/10">
-        <div className="max-w-7xl mx-auto px-8 py-20">
-          <div className="flex flex-col lg:flex-row gap-16 mb-16">
+    <footer className="relative overflow-hidden text-white">
+      <div className="absolute inset-0 w-full h-full overflow-hidden">
+        <video 
+          className="w-full h-full object-cover"
+          src="/assets/Homepage X Hero Video (1).mp4" 
+          autoPlay 
+          loop 
+          muted
+          playsInline
+          style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            minWidth: '100%',
+            minHeight: '100%',
+            width: 'auto',
+            height: 'auto',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 0
+          }}
+        />
+      </div>
+      <div className="relative border-t border-white/10 bg-black/20 backdrop-blur-xl">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 lg:py-20">
+          <div className="flex flex-col lg:flex-row gap-8 md:gap-12 lg:gap-16 mb-12 md:mb-16">
             <div className="lg:w-1/2">
-              <Link href="/" className="flex items-center mb-20">
+              <Link href="/" className="inline-block mb-8 md:mb-12 lg:mb-20">
                 <img 
                   src="../assets/images/logo2.png" 
-                  alt="Logo" 
-                  className="h-8 w-auto" 
+                  alt="Shivneri Systems" 
+                  className="h-7 sm:h-8 w-auto" 
                   width={120}
                   height={32}
                 />
               </Link>
-              <h2 className="text-5xl lg:text-6xl font-light leading-tight mb-6">
-
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight mb-4 sm:mb-6">
                 Let's build<br />
                 something<br />
                 great together.
               </h2>
-              <p className="text-gray-400 text-lg">
+              <p className="text-gray-400 text-base sm:text-lg">
                 Connect with our engineers to scope your next step.
               </p>
             </div>
 
             <div className="lg:w-1/2">
-              <div className="flex gap-3 justify-end mb-12">
-                <button className="w-12 h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all">
-                  <Mail size={20} className="text-white" />
-                </button>
-                <button className="w-12 h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all">
-                  <Phone size={20} className="text-white" />
-                </button>
-                <button className="w-12 h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all">
-                  <MapPin size={20} className="text-white" />
-                </button>
-                <button className="w-12 h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all">
-                  <Linkedin size={20} className="text-white" />
-                </button>
+              <div className="flex flex-wrap gap-2 sm:gap-3 justify-start lg:justify-end mb-8 md:mb-12">
+                <a 
+                  href="mailto:contact@shivneri.com"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all"
+                  aria-label="Email us"
+                >
+                  <Mail size={18} className="text-white w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a 
+                  href="tel:+911234567890"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all"
+                  aria-label="Call us"
+                >
+                  <Phone size={18} className="text-white w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a 
+                  href="https://maps.google.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all"
+                  aria-label="Our location"
+                >
+                  <MapPin size={18} className="text-white w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
+                <a 
+                  href="https://linkedin.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 sm:w-12 sm:h-12 bg-white/5 hover:bg-white/10 rounded-full flex items-center justify-center transition-all"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={18} className="text-white w-4 h-4 sm:w-5 sm:h-5" />
+                </a>
               </div>
 
               {/* Navigation Grid */}
-              <div className="grid grid-cols-4 gap-8 border-t border-white/10 pt-12">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 border-t border-white/10 pt-8 sm:pt-12">
                 {/* Services */}
                 <div>
-                  <h3 className="font-medium mb-4 text-white">Services</h3>
-                  <ul className="space-y-3">
+                  <h3 className="font-medium mb-3 sm:mb-4 text-white text-sm sm:text-base">Services</h3>
+                  <ul className="space-y-2 sm:space-y-3">
                     {services.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                           {item.name}
                         </Link>
                       </li>
@@ -105,11 +144,11 @@ export default function ModernFooter() {
 
                 {/* Assessments */}
                 <div>
-                  <h3 className="font-medium mb-4 text-white">Assessments</h3>
-                  <ul className="space-y-3">
+                  <h3 className="font-medium mb-3 sm:mb-4 text-white text-sm sm:text-base">Assessments</h3>
+                  <ul className="space-y-2 sm:space-y-3">
                     {assessments.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                           {item.name}
                         </Link>
                       </li>
@@ -118,12 +157,12 @@ export default function ModernFooter() {
                 </div>
 
                 {/* Company */}
-                <div>
-                  <h3 className="font-medium mb-4 text-white">Company</h3>
-                  <ul className="space-y-3">
+                <div className="mt-6 sm:mt-0">
+                  <h3 className="font-medium mb-3 sm:mb-4 text-white text-sm sm:text-base">Company</h3>
+                  <ul className="space-y-2 sm:space-y-3">
                     {company.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                           {item.name}
                         </Link>
                       </li>
@@ -132,12 +171,12 @@ export default function ModernFooter() {
                 </div>
 
                 {/* About */}
-                <div>
-                  <h3 className="font-medium mb-4 text-white">About</h3>
-                  <ul className="space-y-3">
+                <div className="mt-6 sm:mt-0">
+                  <h3 className="font-medium mb-3 sm:mb-4 text-white text-sm sm:text-base">About</h3>
+                  <ul className="space-y-2 sm:space-y-3">
                     {about.map((item, i) => (
                       <li key={i}>
-                        <Link href={item.path} className="text-gray-400 hover:text-white text-sm transition-colors">
+                        <Link href={item.path} className="text-gray-400 hover:text-white text-xs sm:text-sm transition-colors">
                           {item.name}
                         </Link>
                       </li>
@@ -146,27 +185,32 @@ export default function ModernFooter() {
                 </div>
               </div>
 
-              <div className="border-t border-white/10 mt-12 pt-12">
-                <div className="grid grid-cols-3 gap-8">
+              <div className="border-t border-white/10 mt-8 sm:mt-12 pt-8 sm:pt-12">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
                   {/* Phone Numbers */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 sm:space-y-3">
                     {contacts.map((contact, i) => (
-                      <div key={i} className="text-sm">
+                      <div key={i} className="text-xs sm:text-sm">
                         <span className="text-white">{contact.region}:</span>
-                        <span className="text-gray-400 ml-2">{contact.phone}</span>
+                        <a href={`tel:${contact.phone.replace(/\D/g, '')}`} className="text-gray-400 hover:text-white ml-2">
+                          {contact.phone}
+                        </a>
                       </div>
                     ))}
                   </div>
 
                   {/* Email */}
-                  <div>
-                    <a href="mailto:sayhello@shivneri.com" className="text-gray-400 hover:text-white text-sm">
+                  <div className="sm:text-center">
+                    <a 
+                      href="mailto:sayhello@shivneri.com" 
+                      className="text-gray-400 hover:text-white text-xs sm:text-sm inline-block"
+                    >
                       sayhello@shivneri.com
                     </a>
                   </div>
 
                   {/* Address */}
-                  <div className="text-right text-sm text-gray-400">
+                  <div className="text-left sm:text-right text-xs sm:text-sm text-gray-400">
                     <div>Shivneri Tech Park</div>
                     <div>Ichalkaranji</div>
                     <div>Maharashtra 416115</div>
@@ -176,19 +220,24 @@ export default function ModernFooter() {
             </div>
           </div>
 
-          <div className="border-t border-white/10 pt-8 flex flex-wrap items-center justify-between gap-4">
-            <div className="flex flex-wrap gap-6 text-sm">
+          <div className="border-t border-white/10 pt-6 sm:pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-6 text-xs sm:text-sm">
               {legalLinks.map((link, i) => (
                 <React.Fragment key={i}>
-                  <Link href={link.path} className="text-gray-500 hover:text-gray-300">
+                  <Link 
+                    href={link.path} 
+                    className="text-gray-500 hover:text-gray-300 transition-colors"
+                  >
                     {link.name}
                   </Link>
-                  {i < legalLinks.length - 1 && <span className="text-gray-700">|</span>}
+                  {i < legalLinks.length - 1 && (
+                    <span className="text-gray-700 hidden sm:inline">|</span>
+                  )}
                 </React.Fragment>
               ))}
             </div>
-            <div className="text-sm text-gray-500">
-              Copyright 2025 Shivneri Systems Pvt. Ltd.
+            <div className="text-xs sm:text-sm text-gray-500">
+              &copy; {new Date().getFullYear()} Shivneri Systems Pvt. Ltd.
             </div>
           </div>
         </div>
