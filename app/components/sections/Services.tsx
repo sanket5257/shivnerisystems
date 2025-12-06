@@ -14,6 +14,11 @@ interface Service {
 const ServicesSection = () => {
   const videoRefs = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const subtitleRef = useRef<HTMLDivElement>(null);
+  const title1Ref = useRef<HTMLHeadingElement>(null);
+  const title2Ref = useRef<HTMLHeadingElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
 
   const services: Service[] = [
@@ -65,16 +70,56 @@ const ServicesSection = () => {
   ];
 
   useEffect(() => {
-    // Initialize animations
+    // Header animation
+    const headerTl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    
+    if (headerRef.current && subtitleRef.current && title1Ref.current && title2Ref.current && ctaRef.current) {
+      // Set initial styles
+      gsap.set([headerRef.current, subtitleRef.current, title1Ref.current, title2Ref.current, ctaRef.current], {
+        opacity: 0,
+        y: 20
+      });
+
+      // Animate header elements in sequence
+      headerTl
+        .to(headerRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          delay: 0.3
+        })
+        .to(subtitleRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6
+        }, '-=0.5')
+        .to(title1Ref.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6
+        }, '-=0.4')
+        .to(title2Ref.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6
+        }, '-=0.3')
+        .to(ctaRef.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6
+        }, '-=0.2');
+    }
+
+    // Service cards animation
     gsap.from('.service-card', {
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 80%',
+        start: 'top 60%',
         toggleActions: 'play none none none',
       },
       y: 50,
       opacity: 0,
-      duration: 0.6,
+      duration: 0.8,
       stagger: 0.1,
       ease: 'power2.out',
     });
@@ -125,17 +170,17 @@ const ServicesSection = () => {
           src="/assets/images/68e3caaa1e0d3deccf973f65_67867867.svg" 
           alt="" 
         />
-        <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 z-50">
-          <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-700 rounded-full text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6 md:mb-8">
+        <div ref={headerRef} className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 z-50">
+          <div ref={subtitleRef} className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 border border-neutral-700 rounded-full text-xs sm:text-sm text-neutral-400 mb-4 sm:mb-6 md:mb-8">
             Services
           </div>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight mb-3 sm:mb-4">
+          <h1 ref={title1Ref} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight mb-3 sm:mb-4">
             <span className="text-neutral-500">It's not just what we build</span>
           </h1>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight">
+          <h1 ref={title2Ref} className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight">
             <span>it'z how we show up.</span>
           </h1>
-          <div className="flex justify-end mt-6 sm:mt-8">
+          <div ref={ctaRef} className="flex justify-end mt-6 sm:mt-8">
             <Link href="/services" className="flex items-center gap-2 sm:gap-3 px-4 sm:px-5 md:px-6 py-2 sm:py-2.5 md:py-3 border border-neutral-700 rounded-full hover:border-neutral-500 transition-colors text-sm sm:text-base">
               <span className="text-neutral-400">Learn more</span>
               <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 rounded-full border border-neutral-700 flex items-center justify-center flex-shrink-0">

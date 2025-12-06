@@ -13,7 +13,7 @@ export default function QuoteHero() {
       {/* Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-6 sm:px-8 md:px-12 lg:px-24">
         <div className="max-w-6xl">
-          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight">
+          <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-bold leading-tight tracking-tight">
             <span className="block">"It's not just how</span>
             <span className="block">we work. It's who</span>
             <span className="block">we are."</span>

@@ -8,7 +8,70 @@ import CTA from '../components/sections/CTA';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function UXUIShowcase() {
+  const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
 
+  useLayoutEffect(() => {
+    // Clear any existing ScrollTrigger instances to avoid memory leaks
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+    // Animate each service card
+    serviceRefs.current.forEach((el, index) => {
+      if (!el) return;
+      
+      // Set initial state (invisible and slightly below)
+      gsap.set(el, { 
+        opacity: 0, 
+        y: 50,
+        scale: 0.98
+      });
+
+      // Create animation on scroll
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 80%', // Start animation when top of element is 80% from top of viewport
+          toggleActions: 'play none none none',
+          once: true
+        },
+        delay: index * 0.1 // Stagger the animations
+      });
+
+      // Add hover effect
+      el.addEventListener('mouseenter', () => {
+        gsap.to(el, {
+          y: -5,
+          boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+
+      el.addEventListener('mouseleave', () => {
+        gsap.to(el, {
+          y: 0,
+          boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+    });
+
+    // Cleanup function
+    return () => {
+      serviceRefs.current.forEach(el => {
+        if (el) {
+          el.removeEventListener('mouseenter', () => {});
+          el.removeEventListener('mouseleave', () => {});
+        }
+      });
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    };
+  }, []);
 
   const services = [
     {
@@ -114,9 +177,10 @@ export default function UXUIShowcase() {
         {services.map((service, index) => (
           <div
             key={service.id}
-            
-            className="service-card story-card relative w-full bg-linear-to-br from-black to-neutral-900 rounded-3xl border border-neutral-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transition-all duration-300"
-            
+            ref={el => {
+              serviceRefs.current[index] = el;
+            }}
+            className="service-card story-card relative w-full bg-linear-to-br from-black to-neutral-900 rounded-3xl border border-neutral-800 overflow-hidden p-8 md:p-10 mb-8 shadow-lg shadow-black/20 cursor-pointer transform-gpu will-change-transform"
           >
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
