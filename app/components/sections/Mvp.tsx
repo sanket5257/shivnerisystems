@@ -44,7 +44,7 @@ export default function MVPCards() {
                 <img
                   src={card.image}
                   alt=""
-                  className="absolute top-0 right-0 w-48 h-48 opacity-30 object-contain"
+                  className="absolute top-0 right-0 w-48 h-48 object-contain"
                 />
               )}
 
